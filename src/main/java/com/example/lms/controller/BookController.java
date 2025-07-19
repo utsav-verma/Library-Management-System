@@ -163,4 +163,15 @@ public class BookController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/sorted/asc")
+    public List<Book> getBookSortedAsc(){
+        return bookService.getBookByPriceAsc();
+    }
+
+    @GetMapping("sorted/desc")
+    public List<Book> getBookSortedDesc()
+    {
+        return bookService.getBookByPriceDesc();
+    }
+
 }

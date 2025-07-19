@@ -35,6 +35,8 @@ public class Book {
     )
     private List<Publisher> publishers;
 
+    private int price;
+
     public Book(){
 
     }
@@ -77,5 +79,13 @@ public class Book {
 
     public void setPublishers(List<Publisher> publishers) {
         this.publishers = publishers;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

@@ -33,4 +33,14 @@ public class BookService {
         bookRepo.findById(id).orElse(null);
         bookRepo.deleteById(id);
     }
+
+    public List<Book> getBookByPriceDesc()
+    {
+        return bookRepo.findAllByOrderByPriceDesc();
+    }
+
+    public List<Book> getBookByPriceAsc()
+    {
+        return bookRepo.findAllByOrderByPriceAsc();
+    }
 }
